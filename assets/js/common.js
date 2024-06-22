@@ -77,7 +77,28 @@ $(document).ready(function () {
 
     // Check on window resize
     window.addEventListener('resize', updateAosAnchorPlacement);
-});
+  });
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1200,
+    });
+
+    function updateAosAnchorPlacement() {
+        var element = document.querySelector('.banner_content h1');
+        if (window.innerWidth <= 540) { // Adjust the width as per your mobile breakpoint
+            element.setAttribute('data-aos-anchor-placement', 'bottom-bottom');
+        } else {
+            element.setAttribute('data-aos-anchor-placement', 'top-center');
+        }
+        AOS.refresh(); // Refresh AOS to apply the changes
+    }
+
+    // Initial check
+    updateAosAnchorPlacement();
+
+    // Check on window resize
+    window.addEventListener('resize', updateAosAnchorPlacement);
+  });
 
 
 // about us
@@ -91,7 +112,7 @@ $(document).ready(function () {
         if (window.innerWidth <= 540) { // Adjust the width as per your mobile breakpoint
             element.setAttribute('data-aos-anchor-placement', 'bottom-bottom');
         } else {
-            element.setAttribute('data-aos-anchor-placement', 'top-center');
+            element.setAttribute('data-aos-anchor-placement', 'center-center');
         }
         AOS.refresh(); // Refresh AOS to apply the changes
     }

@@ -740,7 +740,6 @@ footer{
         font-size: 4.348vw;
     }
     .banner{
-        height: 85vh;
         &::before{
             background: rgba(0, 0, 0, .65);
         }
@@ -757,12 +756,12 @@ footer{
                 margin-bottom: 3.623vw;
             }
             p{
-                margin-bottom: 3.623vw;
+                margin-bottom: 5.623vw;
             }
             &>span{
                 a{
                     font-size: 4.8vw;
-                    padding: 2vw 5vw;
+                    padding: 2vw 8vw;
                 }
             }
         }
@@ -771,7 +770,6 @@ footer{
         }
     }
     .about_us{
-        height: 70vh;
         h2{
             margin-bottom: 3.604vw;
         }
@@ -788,7 +786,7 @@ footer{
     }
 
     .parallax-section{
-        height: 50vh;
+        /* height: 50vh; */
     }
 
     .developer_section{
@@ -817,17 +815,22 @@ footer{
     }
 
     .faq{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 15vw 0;
         .faq_container{
             h2{
                 margin-bottom: 5vw;
             }
             .accordion-header{
-                padding: 4.781vw 2.781vw;
-                padding-right: 4.5vw;
+                padding: 4.781vw 0;
+                padding-right: 5vw;
                 &>div{
                     font-size: 4.667vw;
                 }
                 .arrow_2{
+                    left: 1.5vw;
                     &::before, &::after{
                         width: 2.415vw;
                         height: 0.483vw;
@@ -841,8 +844,8 @@ footer{
                     padding-left: 2.5vw;
                     font-size: 3.865vw;
                     &::before{
-                        width: 3.25vw;
-                        height: 3.25vw;
+                        width: 2.75vw;
+                        height: 2.75vw;
                         left: -2vw;
                         top: .3vw;
                     }
