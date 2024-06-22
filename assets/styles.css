@@ -26,6 +26,10 @@ video {
     display: block;
 }
 
+.menu{
+    display: none;
+}
+
 input,
 textarea,
 button {
@@ -117,6 +121,7 @@ header {
         display: block;
         padding: 1.5vw;
         color: #fff;
+        font-size: 1.3vw;
         border: 2px solid rgb(57, 49, 147);
         border-radius: 4vw;
         transition: all .3s ease-in;
@@ -132,6 +137,7 @@ header {
 
 .parallax-section {
     height: 100vh;
+    width: 100%;
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -184,10 +190,14 @@ p {
     font-size: 1.354vw;
 }
 
+.wrapper{
+    overflow: hidden;
+}
+
 .banner {
+    width: 100%;
     height: 100vh;
     position: relative;
-
     &::before {
         content: '';
         position: absolute;
@@ -282,6 +292,11 @@ p {
             border-radius: 5vw;
         }
     }
+}
+
+.services{
+    width: 100%;
+    overflow: hidden;
 }
 
 .developer_section {
@@ -451,12 +466,12 @@ p {
     .accordion-content .accordion_para {
         padding: 1.781vw 3vw;
         padding-top: 0;
-        font-size: 0.938vw;
         margin: 0;
         position: relative;
         p{
             position: relative;
             padding-left: 1vw;
+            font-size: 0.938vw;
             &::before {
                 content: '';
                 position: absolute;
@@ -489,14 +504,14 @@ p {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-grow: 1;
         flex-wrap: wrap;
+        gap: 2vw;
     }
-
+    
     .form-control {
         position: relative;
-        width: calc(100% - 25.5vw);
-        margin-bottom: 3.125vw;
+        flex-grow: 1;
+        margin-bottom: 1.125vw;
         display: inline-block;
 
         .error {
@@ -514,7 +529,7 @@ p {
         }
 
         &.form_textarea {
-            width: 100%;
+            margin-bottom: 0;
         }
 
         input, textarea {
@@ -539,16 +554,26 @@ p {
 
         label {
             position: absolute;
-            left: 0.781vw;
-            top: 0.781vw;
+            left: 0.9vw;
+            top: 0.9vw;
             pointer-events: none;
-
+            line-height: 1;
             span {
                 display: inline-block;
                 font-size: 1.25vw;
                 min-width: 0.26vw;
                 color: #fff;
                 transition: 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+                background: #a19aed;
+                &:nth-child(1){
+                    padding-left: .25vw;
+                }
+                &:nth-last-child(1){
+                    padding-right: .25vw;
+                }
+            }
+            .hyphen_span{
+                padding: 0 .3vw;
             }
         }
 
@@ -557,7 +582,7 @@ p {
         textarea:focus+label span,
         textarea:valid+label span {
             color: #393193;
-            transform: translateY(-2.5vw);
+            transform: translateY(-1.55vw);
         }
 
         input:invalid,
@@ -596,5 +621,285 @@ footer{
     .footer_text{
         font-size: 1.25vw;
         color: #fff;
+    }
+}
+
+@media screen and (max-width: 540px) {
+    .menu{
+        display: block;
+        .icon-menu {
+            --gap: 1.208vw;
+            --height-bar: 0.966vw;
+            --pos-y-bar-one: 0;
+            --pos-y-bar-three: 0;
+            --scale-bar: 1;
+            --rotate-bar-one: 0;
+            --rotate-bar-three: 0;
+            width: 8.454vw;
+            display: flex;
+            flex-direction: column;
+            gap: var(--gap);
+            cursor: pointer;
+            position: relative;
+          }
+          
+          .bar {
+            position: relative;
+            height: var(--height-bar);
+            width: 100%;
+            border-radius: 0.5vw;
+            background-color: #a19aed;
+          }
+          
+          .bar--1 {
+            top: var(--pos-y-bar-one);
+            transform: rotate(var(--rotate-bar-one));
+            transition: top 200ms 100ms, transform 100ms;
+          }
+          
+          .bar--2 {
+            transform: scaleX(var(--scale-bar));
+            transition: transform 150ms 100ms;
+          }
+          
+          .bar--3 {
+            bottom: var(--pos-y-bar-three);
+            transform: rotate(var(--rotate-bar-three));
+            transition: bottom 200ms 100ms, transform 100ms;
+          }
+          &.active{
+              .icon-menu {
+                  --pos-y-bar-one: calc(var(--gap) + var(--height-bar));
+                  --pos-y-bar-three: calc(var(--gap) + var(--height-bar));
+                  --scale-bar: 0;
+                  --rotate-bar-one: 45deg;
+                  --rotate-bar-three: -45deg;
+                  .bar--1 {
+                    transition: top 200ms, transform 200ms 100ms;
+                  }
+                  .bar--3 {
+                   transition: bottom 200ms, transform 200ms 100ms;
+                }
+            }
+        }
+    }
+    header{
+        .contact_btn{
+            display: none;
+        }
+        .logo{
+            width: 30vw;
+            padding: 3.5vw;
+        }
+        padding: 3.623vw 4.831vw;
+        width: 90%;
+        .nav_list{
+            position: absolute;
+            width: 100%;
+            background: rgba(0, 0, 0, .8);
+            max-height: 0;
+            overflow: hidden;
+            transition: all 0.6s ease;
+            top: 22vw;
+            left: 0;
+            .nav{
+                flex-direction: column;
+                opacity: 0;
+                transition: all 1s ease-in;
+                li{
+                    margin-bottom: 2vw;
+                    .nav_link{
+                        font-size: 6.348vw;
+                    }
+                }
+            }
+            &.active{
+                overflow: visible;
+                padding: 10vw 10vw 50vw;
+                .nav{
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    h1{
+        font-size: 12vw;
+    }
+    h2{
+        font-size: 7vw;
+        text-align: center;
+    }
+    p{
+        font-size: 4.348vw;
+    }
+    .banner{
+        height: 85vh;
+        &::before{
+            background: rgba(0, 0, 0, .65);
+        }
+        .banner_content{
+            width: 80%;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            h1{
+                margin-bottom: 4.831vw;
+            }
+            h2{
+                font-size: 6.763vw;
+                margin-bottom: 3.623vw;
+            }
+            p{
+                margin-bottom: 3.623vw;
+            }
+            &>span{
+                a{
+                    font-size: 4.8vw;
+                    padding: 2vw 5vw;
+                }
+            }
+        }
+        img{
+            object-fit: cover;
+        }
+    }
+    .about_us{
+        height: 70vh;
+        h2{
+            margin-bottom: 3.604vw;
+        }
+        p{
+            text-align: center;
+        }
+        .flex_container{
+            flex-direction: column;
+            gap: 11.604vw;
+            img{
+                width: 100%;
+            }
+        }
+    }
+
+    .parallax-section{
+        height: 50vh;
+    }
+
+    .developer_section{
+        padding-bottom: 12vw;
+        h2,p{
+            margin-bottom: 5.042vw;
+        }
+        .service_container{
+            flex-direction: column;
+            margin-top: 15vw;
+            img{
+                width: 100%;
+            }
+            ul{
+                margin-top: 6.167vw;
+                li{
+                    font-size: 4.348vw;
+                    margin-top: 4.831vw;
+                }
+            }
+        }
+    }
+    .video_content{
+        height: 50vh;
+    }
+
+    .faq{
+        .faq_container{
+            h2{
+                margin-bottom: 5vw;
+            }
+            .accordion-header{
+                padding: 4.781vw 2.781vw;
+                padding-right: 4.5vw;
+                &>div{
+                    font-size: 4.667vw;
+                }
+                .arrow_2{
+                    &::before, &::after{
+                        width: 2.415vw;
+                        height: 0.483vw;
+                    }
+                }
+            }
+        }
+        .accordion-content{
+            .accordion_para{
+                p{
+                    padding-left: 2.5vw;
+                    font-size: 3.865vw;
+                    &::before{
+                        width: 3.25vw;
+                        height: 3.25vw;
+                        left: -2vw;
+                        top: .3vw;
+                    }
+                }
+            }
+        }
+    }
+
+    .contact{
+        padding: 15vw 10vw;
+        h2{
+            margin-bottom: 10vw;
+        }
+        form{
+            width: 100%;
+            max-width: none;
+        }
+        .form-control {
+            input, textarea{
+                font-size: 4.348vw;
+                padding: 2.899vw;
+                border-radius: 3.5vw;
+                margin-bottom: 7vw;
+            }
+            label{
+                top: 3.781vw;
+                left: 3.781vw;
+                padding: 0 .1vw;
+                span{
+                    background: #a19aed;
+                    font-size: 4.348vw;
+                    &:nth-child(1){
+                        padding-left: .5vw;
+                    }
+                    &:nth-last-child(1){
+                        padding-right: .5vw;
+                    }
+                }
+                .hyphen_span{
+                    padding: 0 .3vw;
+                }
+            }
+            input:focus+label span,
+            input:valid+label span,
+            textarea:focus+label span,
+            textarea:valid+label span {
+                transform: translateY(-6vw);
+            }
+            .error{
+                font-size: 4vw;
+                bottom: .8vw;
+            }
+        }
+        .form-submit{
+            button{
+                font-size: 5.25vw;
+                border-radius: 2vw;
+                padding: 2vw 4vw;
+            }
+        }
+    }
+    footer{
+        padding: 6vw;
+        .footer_text{
+            font-size: 4.25vw;
+        }
     }
 }

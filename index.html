@@ -19,15 +19,24 @@
         <div class="logo">
             <img src="assets/images/we-tech-it.svg" alt="">
         </div>
-        <ul class="nav">
-            <li><a href="#home" class="nav_link">Home</a></li>
-            <li><a href="#about_us" class="nav_link">About Us</a></li>
-            <li><a href="#services" class="nav_link">Services</a></li>
-            <!-- <li><a href="#portfolio" class="nav_link">Portfolio</a></li> -->
-            <li><a href="#faq" class="nav_link">FAQs</a></li>
-            <!-- <li><a href="#contact" class="nav_link">Contact</a></li> -->
-        </ul>
+        <div class="nav_list">
+            <ul class="nav">
+                <li><a href="#home" class="nav_link">Home</a></li>
+                <li><a href="#about_us" class="nav_link">About Us</a></li>
+                <li><a href="#services" class="nav_link">Services</a></li>
+                <!-- <li><a href="#portfolio" class="nav_link">Portfolio</a></li> -->
+                <li><a href="#faq" class="nav_link">FAQs</a></li>
+                <!-- <li><a href="#contact" class="nav_link">Contact</a></li> -->
+            </ul>
+        </div>
         <a href="#contact" class="contact_btn">Get Started</a>
+        <div class="menu">
+            <label class="icon-menu">
+                <div class="bar bar--1"></div>
+                <div class="bar bar--2"></div>
+                <div class="bar bar--3"></div>
+            </label>
+        </div>
     </header>
     <main class="wrapper">
         <section id="home" class="banner" data-section="banner">
@@ -51,7 +60,7 @@
         <section id="about_us" class="about_us" data-section="">
             <div class="about_container">
                 <div class="flex_container">
-                    <img src="assets/images/about_us.webp" alt="" class="" data-aos="fade-right" data-aos-anchor-placement="top-center"
+                    <img src="assets/images/about_us.webp" alt="" class="about_img" data-aos="fade-right" data-aos-anchor-placement="top-center"
                     data-aos-duration="1200">
                     <div class="about_text" data-aos="fade-left" data-aos-anchor-placement="top-center"
                     data-aos-duration="1200">
@@ -61,7 +70,7 @@
                 </div>
             </div>
         </section>
-        <section id="services">
+        <section id="services" class="services">
             <div class="parallax-section parallax-1"></div>
             <div class="developer_section frontend_section">
                 <h2 data-aos="fade-up" data-aos-anchor-placement="top-center"
@@ -161,7 +170,7 @@
                 <div class="form-control">
                     <input type="text" name="" id="numberInput" minlength="10" maxlength="10" required>
                     <label>
-                        <span style="transition-delay:0ms">M</span><span style="transition-delay:50ms">o</span><span style="transition-delay:100ms">b</span><span style="transition-delay:150ms">i</span><span style="transition-delay:200ms">l</span><span style="transition-delay:250ms">e</span> <span style="transition-delay:300ms">N</span><span style="transition-delay:350ms">u</span><span style="transition-delay:400ms">m</span><span style="transition-delay:450ms">b</span><span style="transition-delay:500ms">e</span><span style="transition-delay:550ms">r</span>
+                        <span style="transition-delay:0ms">M</span><span style="transition-delay:50ms">o</span><span style="transition-delay:100ms">b</span><span style="transition-delay:150ms">i</span><span style="transition-delay:200ms">l</span><span style="transition-delay:250ms">e</span><span style="transition-delay:300ms" class="hyphen_span">-</span><span style="transition-delay:350ms">N</span><span style="transition-delay:400ms">u</span><span style="transition-delay:450ms">m</span><span style="transition-delay:500ms">b</span><span style="transition-delay:550ms">e</span><span style="transition-delay:600ms">r</span>
                     </label>
                     <span class="error">Please add your contact number</span>
                 </div>

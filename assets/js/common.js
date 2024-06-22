@@ -30,7 +30,18 @@ $(document).ready(function () {
         $content.css('max-height', 0);
       }
     });
-  });  
+  });
+  
+  $('.menu').click(function(e){
+    const $nav = $('.nav_list');
+    $(this).toggleClass('active');
+    $nav.toggleClass('active');
+    if ($nav.hasClass('active')) {
+      $nav.css('max-height', $nav[0].scrollHeight + 'px');
+    } else {
+      $nav.css('max-height', 0);
+    }
+  });
 
   const numberInput = document.getElementById('numberInput');
   
@@ -42,3 +53,53 @@ $(document).ready(function () {
   $('.form-submit').click(function(e){
     $('.form-control .error').addClass('active')
   });
+
+
+
+  // banner
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1200,
+    });
+
+    function updateAosAnchorPlacement() {
+        var element = document.querySelector('.banner_content h2');
+        if (window.innerWidth <= 540) { // Adjust the width as per your mobile breakpoint
+            element.setAttribute('data-aos-anchor-placement', 'bottom-bottom');
+        } else {
+            element.setAttribute('data-aos-anchor-placement', 'top-center');
+        }
+        AOS.refresh(); // Refresh AOS to apply the changes
+    }
+
+    // Initial check
+    updateAosAnchorPlacement();
+
+    // Check on window resize
+    window.addEventListener('resize', updateAosAnchorPlacement);
+});
+
+
+// about us
+  document.addEventListener('DOMContentLoaded', function() {
+    AOS.init({
+        duration: 1200,
+    });
+
+    function updateAosAnchorPlacement() {
+        var element = document.querySelector('.about_text');
+        if (window.innerWidth <= 540) { // Adjust the width as per your mobile breakpoint
+            element.setAttribute('data-aos-anchor-placement', 'bottom-bottom');
+        } else {
+            element.setAttribute('data-aos-anchor-placement', 'top-center');
+        }
+        AOS.refresh(); // Refresh AOS to apply the changes
+    }
+
+    // Initial check
+    updateAosAnchorPlacement();
+
+    // Check on window resize
+    window.addEventListener('resize', updateAosAnchorPlacement);
+});
+ 
