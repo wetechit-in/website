@@ -30,7 +30,7 @@
         <section id="home" class="banner" data-section="banner">
             <picture>
                 <source media="(min-width:540px)" srcset="">
-                <img src="assets/images/coding_img.jpg" alt="">
+                <img src="assets/images/coding_img.webp" alt="">
             </picture>
             <div class="banner_content">
                 <h1 data-aos="fade-right" data-aos-anchor-placement="top-center"
@@ -48,7 +48,7 @@
         <section id="about_us" class="about_us" data-section="">
             <div class="about_container">
                 <div class="flex_container">
-                    <img src="assets/images/about_us.jpg" alt="" class="" data-aos="fade-right" data-aos-anchor-placement="top-center"
+                    <img src="assets/images/about_us.webp" alt="" class="" data-aos="fade-right" data-aos-anchor-placement="top-center"
                     data-aos-duration="1200">
                     <div class="about_text" data-aos="fade-left" data-aos-anchor-placement="top-center"
                     data-aos-duration="1200">
@@ -66,7 +66,7 @@
                 <p data-aos="fade-up" data-aos-anchor-placement="top-center"
                 data-aos-duration="1200">Our frontend development services focus on creating visually appealing and user-friendly interfaces. We use the latest technologies and design principles to ensure your website is not only beautiful but also responsive and intuitive.</p>
                 <div class="service_container">
-                    <img src="assets/images/service-1.png" alt="" data-aos="fade-right" data-aos-anchor-placement="top-center"
+                    <img src="assets/images/service-1.webp" alt="" data-aos="fade-right" data-aos-anchor-placement="top-center"
                     data-aos-duration="1200">
                     <ul data-aos="fade-left" data-aos-anchor-placement="top-center"
                     data-aos-duration="1200">
@@ -84,7 +84,7 @@
                 <p data-aos="fade-up" data-aos-anchor-placement="top-center"
                 data-aos-duration="1200">Our backend development services ensure your website is robust, secure, and scalable. We build powerful server-side applications that handle complex functionalities and data management with ease.</p>
                 <div class="service_container">
-                    <img src="assets/images/service-2.png" alt="" data-aos="fade-right" data-aos-anchor-placement="top-center"
+                    <img src="assets/images/service-2.webp" alt="" data-aos="fade-right" data-aos-anchor-placement="top-center"
                     data-aos-duration="1200">
                     <ul data-aos="fade-left" data-aos-anchor-placement="top-center"
                     data-aos-duration="1200">
@@ -104,8 +104,10 @@
         </section>
         <section id="faq" class="faq">
             <div class="faq_container">
-                <h2>FAQs - Your Burning Questions Answered</h2>
-                <div class="accordion">
+                <h2 data-aos="fade-up" data-aos-anchor-placement="top-center"
+                data-aos-duration="1200">FAQs - Your Burning Questions Answered</h2>
+                <div class="accordion" data-aos="fade" data-aos-anchor-placement="top-center"
+                data-aos-duration="1600">
                     <div class="accordion-item">
                       <button class="accordion-header"><div class="">What services do you offer?</div><span class="arrow_2"></span></button>
                       <div class="accordion-content">
@@ -142,10 +144,40 @@
             </div>
         </section>
         <section id="contact" class="contact">
-            <form action="">
-                
+            <h2 data-aos="fade-up" data-aos-anchor-placement="top-center"
+            data-aos-duration="1200">Get In Touch Now!</h2>
+            <form action="" data-aos="fade" data-aos-anchor-placement="top-center"
+            data-aos-duration="1600">
+                <div class="form-control">
+                    <input type="email" required="">
+                    <label>
+                        <span style="transition-delay:0ms">E</span><span style="transition-delay:50ms">m</span><span style="transition-delay:100ms">a</span><span style="transition-delay:150ms">i</span><span style="transition-delay:200ms">l</span>
+                    </label>
+                    <span class="error">Please add your Email address</span>
+                </div>
+                <div class="form-control">
+                    <input type="text" name="" id="numberInput" minlength="10" maxlength="10" required>
+                    <label>
+                        <span style="transition-delay:0ms">M</span><span style="transition-delay:50ms">o</span><span style="transition-delay:100ms">b</span><span style="transition-delay:150ms">i</span><span style="transition-delay:200ms">l</span><span style="transition-delay:250ms">e</span> <span style="transition-delay:300ms">N</span><span style="transition-delay:350ms">u</span><span style="transition-delay:400ms">m</span><span style="transition-delay:450ms">b</span><span style="transition-delay:500ms">e</span><span style="transition-delay:550ms">r</span>
+                    </label>
+                    <span class="error">Please add your contact number</span>
+                </div>
+                <div class="form-control form_textarea">
+                    <textarea name="" id="" cols="30" rows="10" required></textarea>
+                    <label>
+                        <span style="transition-delay:0ms">M</span><span style="transition-delay:50ms">e</span><span style="transition-delay:100ms">s</span><span style="transition-delay:150ms">s</span><span style="transition-delay:200ms">a</span><span style="transition-delay:250ms">g</span><span style="transition-delay:300ms">e</span>
+                    </label>
+                    <span class="error">Please add your Message</span>
+                </div>
+                <div class="form-submit">
+                    <button type="submit">submit</button>
+                </div>
             </form>
         </section>
+        <footer>
+            <div class="footer_text" data-aos="fade-up" data-aos-anchor-placement="top-bottom"
+            data-aos-duration="1200">© 2024 WeTechIt. All Rights Reserved.</div>
+        </footer>
     </main>
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/common.js"></script>

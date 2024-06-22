@@ -31,3 +31,14 @@ $(document).ready(function () {
       }
     });
   });  
+
+  const numberInput = document.getElementById('numberInput');
+  
+  numberInput.addEventListener('input', function() {
+      // Remove non-numeric characters using regex
+      this.value = this.value.replace(/[^0-9]/g, '');
+  });
+
+  $('.form-submit').click(function(e){
+    $('.form-control .error').addClass('active')
+  });
