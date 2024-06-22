@@ -792,6 +792,7 @@ footer{
         .service_container{
             flex-direction: column;
             margin-top: 15vw;
+            width: 100%;
             img{
                 width: 100%;
             }
