@@ -710,6 +710,13 @@ footer{
                     margin-bottom: 2vw;
                     .nav_link{
                         font-size: 6.348vw;
+                        &.active {
+                            color: #fff;
+            
+                            &::before {
+                                display: none;
+                            }
+                        }
                     }
                 }
             }
